@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Title and Icon -->
+    <title>Mangata & Gallo</title>
+    <link rel="icon" href="./assets/Asset 3@3x.png" type="image/x-icon">
+    
+    <!-- Meta tags for SEO -->
+    <meta property="author" content="Mangata & Gallo">
+    <meta property="description" content="Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries.">
+    <meta prroperty="title" content="Luxury Jewelry: Mangata & Gallo">
+    <meta property="language" content="en_US">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Meta tags for social media sharing-->
+    <meta property="og:title" content="Luxury Jewelry: Mangata & Gallo">
+    <meta property="og:type"  content="website">
+    <meta property="og:image" content="./assets/Asset 4@3x.png">
+    <meta property="og:url"   content="https://mangata_gallo/">
+    <meta property="og:description" content="Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Luxury Jewelry: Mangata & Gallo">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Rouge+Script&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/3478937044.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./assets/Asset 4@3x.png" alt="Mangata & Gallo Logo" class="logo">
+            <ul>
+                <li><a href="#">Career</a></li>
+                <div id="hiddenPhoneNumber" style="display: none;">123-456-7890</div>
+                <li><a href="#" onclick="makeCall()">Contact</a></li>
+                <li><a href="./login.html">Sign in | Sign up</a></li>
+                <li><img src="assets/search.png"></li>
+            </ul>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./business.html">Business</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="./about.html">About</a></li>  
+            </ul>
+        </div>
+        <div class="main">
+            <form class="form">
+                <h1>Hey there, welcome!</h1>
+                <div class="name_group">
+                    <div class="first_name">
+                        <label for="u_first_name">First name</label>
+                        <input type="text" id="u_first_name" name="u_first_name" required>
+                    </div>
+                    <div class="last_name">
+                        <label for="u_last_name">Last name</label>
+                        <input type="text" id="u_last_name" name="u_last_name" required>
+                    </div>
+                </div>
+                <label for="u_email">Email</label>
+                <i class="fa-solid fa-envelope prefix"></i>
+                <input type="email" id="u_email" name="u_email" required>
+                <label for="u_password">Password</label>
+                <i class="fa-solid fa-key prefix"></i>
+                <input type="password" id="u_password" name="u_password" required>
+                <i class="fa-solid fa-eye-slash suffix"></i>
+                <label for="u_confirm_password">Confirm password</label>
+                <i class="fa-solid fa-key prefix"></i>
+                <input type="password" id="u_confirm_password" name="u_confirm_password" required>
+                <i class="fa-solid fa-eye-slash suffix suffix2"></i>
+                <button type="submit">Sign up</button>
+                <div class="signup_container">
+                    <p>Already have an account?</p><span><a href="./login.html">Sign in</a></span>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <p class="join">JOIN THE VIP CLUB TODAY</p>
+            <div class="footer_content">
+                
+                <div>
+                    <h1>Contact Us</h1>
+                    <p><i class="fa-solid fa-phone"></i>(123)-456-789</p>
+                    <p><i class="fa-solid fa-envelope"></i>mangata_gallo@gmail.com</p>
+                </div>
+
+                <div>
+                    <h1>Follow Us</h1>
+                    <p><i class="fa-brands fa-facebook"></i>Facebook</p>
+                    <p><i class="fa-brands fa-square-instagram"></i>Instagram</p>
+                    <p><i class="fa-brands fa-square-x-twitter"></i>Twitter</p>
+                </div>
+                
+                <div>
+                    <h1>Join VIP Shopper Club</h1>
+                    <p><i class="fa-solid fa-circle-info"></i>Join our VIP club for trending products, updates and special promotions.</p>
+                    <form action="">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">Join Now</button>
+                    </form>
+                    <p><a href="./login.html">Already a VIP? Login now</a></span></p>
+                </div>
+            </div>
+            <img src="./assets/Asset 3@3x.png" alt="Mangata & Gallo Logo" style="height: 80px; width: 120px;">
+            <p class="copyright">Copyright&copy2024 Mangata & Gallo</p>
+        </div>
+    </div>
+    <script>
+        function makeCall() {
+            var phoneNumber = document.getElementById("hiddenPhoneNumber").innerText;
+        
+            window.location.href = "tel:" + phoneNumber;
+        }
+
+        document.querySelector('.suffix').addEventListener('click', function() {
+            var password = document.getElementById('u_password');
+            var type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            this.classList.toggle('fa-eye');
+            this.classList.toggle("fa-eye-slash");
+        });
+
+        document.querySelector('.suffix2').addEventListener('click', function() {
+            var password = document.getElementById('u_confirm_password');
+            var type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            this.classList.toggle('fa-eye');
+            this.classList.toggle("fa-eye-slash");
+        });
+        
+    </script>
+</body>
+</html>
