@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="Luxury Jewelry: Mangata & Gallo">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="career.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -53,30 +53,40 @@
             </ul>
         </div>
         <div class="main">
-            <form class="form">
-                <h1>Sign in</h1>
-                <label for="u_email">Email</label>
-                <i class="fa-solid fa-envelope prefix"></i>
-                <input type="email" id="u_email" name="u_email" required>
-                <label for="u_password">Password</label>
-                <i class="fa-solid fa-key prefix"></i>
-                <input type="password" id="u_password" name="u_password" required>
-                <i class="fa-solid fa-eye-slash suffix"></i>
-                <span id="forgot">Forgot password?</span>
-                <button type="submit">Sign in</button>
-                <div class="signup_container">
-                    <p>Don't have an account?</p><span><a href="./signup.html">Sign up</a></span>
+            <div class="container">
+                <h2>Career</h2>
+                <h2 class="section-title">Employment Opportunities at Mangata and Gallo</h2>
+                <p>Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings, and anniversaries. The jewelry company primarily operates online and has a small storefront in Austin, Texas with an atelier attached for browsing. Mangata & Gallo's selection of jewelry is known for its high-quality and classic look. The owner, an Austin local, is well known for her jewelry designs.</p>
+                
+                <h2 class="section-title">About the Owner</h2>
+                <p>Mariana is the owner and the lead designer of Mangata and Gallo. After graduating from design school with a specialization in diamond cutting and metal smithing, Mariana opened a store in her hometown, Austin, and started to grow her business online. Mariana has always managed every aspect of the business, from jewelry design to marketing to e-commerce. However, she recently hired several artisans to help craft her designs and a young employee to help manage the company website and social media accounts.</p>
+                
+                <h2 class="section-title">Join Our Team</h2>
+                <p>We are always looking for passionate and talented individuals to join our team. If you have a love for jewelry, a keen eye for design, and a dedication to providing excellent customer service, Mangata and Gallo might be the perfect place for you to grow your career.</p>
+                
+                <h2 class="section-title">Current Openings</h2>
+                <p>Currently, we have the following positions available:</p>
+                <ul>
+                    <li>Jewelry Artisan: Help craft unique and beautiful jewelry designs alongside our talented team.</li>
+                    <li>Marketing Specialist: Assist in promoting our brand and managing our marketing campaigns.</li>
+                    <li>Social Media Manager: Engage with our online community and manage our social media accounts.</li>
+                    <li>E-commerce Specialist: Enhance our online shopping experience and manage our website operations.</li>
+                </ul>
+                
+                <div class="contact">
+                    <p>If you are interested in any of these positions, please send your resume and a cover letter to <a href="mailto:careers@mangata_gallo.com">careers@mangata_gallo.com</a>.</p>
+                    <p>We look forward to hearing from you!</p>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="footer">
             <p class="join">JOIN THE VIP CLUB TODAY</p>
             <div class="footer_content">
                 
                 <div>
-                    <h1>Contact Us</h1>
+                    <h>Contact Us</h>
                     <p><i class="fa-solid fa-phone"></i>(123)-456-789</p>
-                    <p><i class="fa-solid fa-envelope"></i>mangata_gallo@gmail.com</p>
+                    <p><i class="fa-solid fa-envelope"/></i>mangata_gallo@gmail.com</p>
                 </div>
 
                 <div>
@@ -106,16 +116,6 @@
         
             window.location.href = "tel:" + phoneNumber;
         }
-
-        document.querySelector('.suffix').addEventListener('click', function() {
-            var password = document.getElementById('u_password');
-            var type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-
-            this.classList.toggle('fa-eye');
-            this.classList.toggle("fa-eye-slash");
-        });
-        
     </script>
 </body>
 </html>
