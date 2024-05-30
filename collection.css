@@ -21,6 +21,7 @@ body{
     top: 0;
     width: 100%;
     z-index: 1000;
+    height: 77px
 }
 
 .header ul {
@@ -102,73 +103,184 @@ li img{
     text-decoration: underline;
 }
 
-h1{
+/*      Main section    */
+
+.main {
+    padding: 0 13%;
+}
+
+.main .banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main h2:first-child {
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 20px 0;
+    margin: 2rem 0;
     text-align: center;
 }
 
-.main {
+.collection_container{
+    padding: 10px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-}
-
-.main form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    gap: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 1px;
     border-radius: 10px;
-    padding: 20px 50px;
+}
+
+.filter{
+    position: sticky;
+    top: 77px; /*don't use heigh z-index because it need to go through and hide under header when scroll to end of page*/
+    background-color: white;
+    padding: 10px;
+    width: 250px;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.filter h3{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.filter-section ul {
+    list-style-type: none;
+}
+
+.filter-section li {
+    display: flex; /*To make bottom edge of label and check box to be the same*/
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.filter-section label {
+    font-size: 14px;
+    color: #555;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-grow: 1;
+    max-width: calc(100% - 250px - 10px);
+}
+
+#search_form{
+    background-color: white;
+    position: sticky;
+    top: 77px;
+    z-index: 1000;
+}
+
+.content form {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-height: fit-content;
+}
+
+.content form i {
+    transform: translate(100%, 38%);
+}
+
+.content input{
+    font-size: medium;
     width: 80%;
-    max-width: 600px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 10px;
-}
-
-.main form label{
-    font-size: medium;
-    font-weight: 500;
-}
-
-.main form input{
-    margin-top: 8px;
-    margin-bottom: 10px;
     padding: 10px;
-    border-radius: 5px;
-    font-size: medium;
-    width: 100%;
-    height: 40px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-left: 40px;
+    border-radius: 10px;
+    margin: 10px 0;
+    margin-right: 20px;
+    margin-left: -15px;
 }
 
-#message {
-    margin-top: 8px;
-    margin-bottom: 10px;
-    border: 2px solid black;
-    min-width: 50%;
-    width: 100%;
-    max-width: 500px;
-    max-height: 300px;
+.content button {
+    width: 10%;
     padding: 10px;
-    height: 100px;
-    border-radius: 5px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    font-size: large;
-}
-
-form button{
-    align-self: center;
-    margin-top: 10px;
-    padding: 10px 20px;
     border-radius: 10px;
     background-color: black;
     color: white;
     font-weight: 600;
+    margin: 10px 0;
+    min-width: fit-content;
+    transition: transform 0.1s ease-in-out;
+}
+
+.content button:hover {
     cursor: pointer;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: scale(1.05);
+}
+
+.content .product_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.content .product{
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: left;
+    height: 305px;
+    width: 250px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content .product:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.content .product img {
+    display: block;
+    margin: 10px 10px 0 10px;
+    width: 230px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.content .product h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 10px;
+    font-family: Rouge;
+}
+
+.content .product p{
+    font-size: 0.9rem;
+    margin: 0 10px;
 }
 
 .footer{
@@ -284,8 +396,24 @@ form button{
         padding-top: 100px;
     }
 
+    .filter{
+        display: none;
+    }
+
+    .content{
+        max-width: 100%;
+    }
+
+    #search_form{
+        display: none;
+    }
+
     .logo{
         height: 20px; width: 150px;
+    }
+
+    .header{
+        height: auto;
     }
 
     .header a{

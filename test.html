@@ -3,89 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mangata and Gallo Employment</title>
+    <title>Sticky Element Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        .content {
+            height: 2000px; /* For demonstration purposes to create scroll */
+            padding: 20px;
+        }
+
+        .spacer {
+            height: 600px; /* For demonstration purposes to create space before the sticky element */
+        }
+
+        .sticky-wrapper {
+            position: relative;
+        }
+
+        .sticky {
             background-color: #f4f4f4;
-        }
-        .header {
-            background-color: #004d00;
-            color: white;
-            padding: 20px;
+            padding: 10px 0;
             text-align: center;
+            width: 100%;
+            transition: top 0.3s ease-in-out;
         }
-        .search-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .search-container input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .search-container button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #004d00;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        .product-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
-        }
-        .product-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 200px;
-            text-align: center;
-            padding: 20px;
-        }
-        .product-card img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .product-card p {
-            margin: 10px 0;
-            font-size: 18px;
-            font-weight: bold;
+
+        .sticky.stuck {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Mangata and Gallo Jewelry</h1>
-        <p>Specializing in Engagements, Weddings, and Anniversaries</p>
-    </div>
-    <div class="search-container">
-        <input type="text" placeholder="Enter the jewelry name here...">
-        <button>Search</button>
-    </div>
-    <div class="product-container">
-        <div class="product-card">
-            <img src="https://media.ed.edmunds-media.com/bmw/m8-gran-coupe/2023/oem/2023_bmw_m8-gran-coupe_sedan_competition_fq_oem_1_1280.jpg" alt="Product Image">
-            <p>Engagement Ring</p>
+    <div class="content">
+        <div class="spacer"></div>
+        <div class="sticky-wrapper" id="sticky-wrapper">
+            <div class="sticky" id="sticky-element">
+                <h1>Sticky Header</h1>
+                <p>This header will stick to the top when you scroll down.</p>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1062x597/format/jpg/quality/100/https://s.aolcdn.com/os/ab/_cms/2023/07/28114444/PXL_20230701_1610577511.jpg" alt="Product Image">
-            <p>Wedding Band</p>
-        </div>
-        <div class="product-card">
-            <img src="https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m8-102-649c413018299.jpeg?crop=0.736xw:0.829xh;0.119xw,0.171xh&resize=768:*" alt="Product Image">
-            <p>Anniversary Necklace</p>
-        </div>
+        <div class="spacer"></div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var stickyElement = document.getElementById('sticky-element');
+            var observer = new IntersectionObserver(
+                function(entries) {
+                    if (entries[0].boundingClientRect.y < 1) {
+                        stickyElement.classList.add('stuck');
+                    } else {
+                        stickyElement.classList.remove('stuck');
+                    }
+                },
+                { threshold: [1.0] }
+            );
+            observer.observe(document.getElementById('sticky-wrapper'));
+        });
+    </script>
 </body>
 </html>

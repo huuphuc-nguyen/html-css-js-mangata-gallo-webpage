@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Title and Icon -->
+    <title>Mangata & Gallo</title>
+    <link rel="icon" href="./assets/Asset 3@3x.png" type="image/x-icon">
+    
+    <!-- Meta tags for SEO -->
+    <meta property="author" content="Mangata & Gallo">
+    <meta property="description" content="Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries.">
+    <meta prroperty="title" content="Luxury Jewelry: Mangata & Gallo">
+    <meta property="language" content="en_US">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Meta tags for social media sharing-->
+    <meta property="og:title" content="Luxury Jewelry: Mangata & Gallo">
+    <meta property="og:type"  content="website">
+    <meta property="og:image" content="https://huuphuc-nguyen.github.io/HTML-CSS-JS-Mangata-Gallo-Webpage/assets/Designer.png">
+    <meta property="og:url"   content="https://huuphuc-nguyen.github.io/HTML-CSS-JS-Mangata-Gallo-Webpage/">
+    <meta property="og:description" content="Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Luxury Jewelry: Mangata & Gallo">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="collection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Rouge+Script&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/3478937044.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="./index.html"><img src="./assets/Asset 4@3x.png" alt="Mangata & Gallo Logo" class="logo"></a>
+            <ul>
+                <li><a href="./career.html">Career</a></li>
+                <div id="hiddenPhoneNumber" style="display: none;">123-456-7890</div>
+                <li><a href="#" onclick="makeCall()">Contact</a></li>
+                <li><a href="./login.html">Sign in | Sign up</a></li>
+                <li><img src="assets/search.png"></li>
+            </ul>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./business.html">Business</a></li>
+                <li><a href="./collection.html" class="active">Collection</a></li>
+                <li><a href="./about.html">About</a></li>  
+            </ul>
+        </div>
+        <div class="main">
+            <section>
+                <img src="./assets/collection_banner.png" alt="Banner" class="banner">
+            </section>
+            <section>
+                <h2>Collection</h2>
+                <div class="collection_container">
+                    <div class="filter">
+                        <h3>Filter by</h3>
+                                <!-- Types of Jewelry -->
+                        <div class="filter-section">
+                            <h4>Types of Jewelry</h4>
+                            <ul>
+                                <li><input type="checkbox" id="rings"><label for="rings">Rings</label></li>
+                                <li><input type="checkbox" id="necklaces"><label for="necklaces">Necklaces</label></li>
+                                <li><input type="checkbox" id="earrings"><label for="earrings">Earrings</label></li>
+                                <li><input type="checkbox" id="bracelets"><label for="bracelets">Bracelets</label></li>
+                                <li><input type="checkbox" id="brooches"><label for="brooches">Brooches</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Materials -->
+                        <div class="filter-section">
+                            <h4>Materials</h4>
+                            <ul>
+                                <li><input type="checkbox" id="gold"><label for="gold">Gold</label></li>
+                                <li><input type="checkbox" id="silver"><label for="silver">Silver</label></li>
+                                <li><input type="checkbox" id="platinum"><label for="platinum">Platinum</label></li>
+                                <li><input type="checkbox" id="diamonds"><label for="diamonds">Diamonds</label></li>
+                                <li><input type="checkbox" id="pearls"><label for="pearls">Pearls</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Styles -->
+                        <div class="filter-section">
+                            <h4>Styles</h4>
+                            <ul>
+                                <li><input type="checkbox" id="classic"><label for="classic">Classic</label></li>
+                                <li><input type="checkbox" id="modern"><label for="modern">Modern</label></li>
+                                <li><input type="checkbox" id="vintage"><label for="vintage">Vintage</label></li>
+                                <li><input type="checkbox" id="bohemian"><label for="bohemian">Bohemian</label></li>
+                                <li><input type="checkbox" id="minimalist"><label for="minimalist">Minimalist</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Occasions -->
+                        <div class="filter-section">
+                            <h4>Occasions</h4>
+                            <ul>
+                                <li><input type="checkbox" id="engagement"><label for="engagement">Engagement</label></li>
+                                <li><input type="checkbox" id="wedding"><label for="wedding">Wedding</label></li>
+                                <li><input type="checkbox" id="anniversary"><label for="anniversary">Anniversary</label></li>
+                                <li><input type="checkbox" id="birthday"><label for="birthday">Birthday</label></li>
+                                <li><input type="checkbox" id="holiday"><label for="holiday">Holiday</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="filter-section">
+                            <h4>Price Range</h4>
+                            <ul>
+                                <li><input type="checkbox" id="under-100"><label for="under-100">Under $100</label></li>
+                                <li><input type="checkbox" id="100-500"><label for="100-500">$100 - $500</label></li>
+                                <li><input type="checkbox" id="500-1000"><label for="500-1000">$500 - $1000</label></li>
+                                <li><input type="checkbox" id="1000-5000"><label for="1000-5000">$1000 - $5000</label></li>
+                                <li><input type="checkbox" id="above-5000"><label for="above-5000">$5000 and above</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Customization Options -->
+                        <div class="filter-section">
+                            <h4>Customization Options</h4>
+                            <ul>
+                                <li><input type="checkbox" id="custom-engraving"><label for="custom-engraving">Custom Engraving</label></li>
+                                <li><input type="checkbox" id="custom-design"><label for="custom-design">Custom Design</label></li>
+                                <li><input type="checkbox" id="personalized-pieces"><label for="personalized-pieces">Personalized Pieces</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Collections -->
+                        <div class="filter-section">
+                            <h4>Collections</h4>
+                            <ul>
+                                <li><input type="checkbox" id="new-arrivals"><label for="new-arrivals">New Arrivals</label></li>
+                                <li><input type="checkbox" id="best-sellers"><label for="best-sellers">Best Sellers</label></li>
+                                <li><input type="checkbox" id="limited-edition"><label for="limited-edition">Limited Edition</label></li>
+                                <li><input type="checkbox" id="exclusive-collections"><label for="exclusive-collections">Exclusive Collections</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <form id="search_form">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search for products" required>
+                            <button type="submit">Search</button>
+                        </form>
+                        <div class="product_container">
+                            <div class="product">
+                                <img src="./assets/collection4.jpg">
+                                <h3>Golden Luxury Set</h3>
+                                <p>Set: rings, bracelet, necklaces</p>
+                            </div>
+                            <div class="product">
+                                <img src="./assets/collection5.jpg">
+                                <h3>Internal Love</h3>
+                                <p>Couple rings</p>
+                            </div>
+                            <div class="product">
+                                <img src="./assets/collection7.jpg">
+                                <h3>Diamond Earings</h3>
+                                <p>Earings</p>
+                            </div>
+                            <div class="product">
+                                <img src="./assets/collection6.jpg">
+                                <h3>Golden Necklaces</h3>
+                                <p>Necklaces</p>
+                            </div>
+                            <div class="product">
+                                <img src="./assets/collection8.jpg">
+                                <h3>Meditation Rings</h3>
+                                <p>For Luck and Prosperity</p>
+                            </div>
+                            <div class="product">
+                                <img src="./assets/collection9.jpg">
+                                <h3>Summer 2024 Necklaces</h3>
+                                <p>New collection for summer 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="footer">
+            <p class="join">JOIN THE VIP CLUB TODAY</p>
+            <div class="footer_content">
+                
+                <div>
+                    <h>Contact Us</h>
+                    <p onclick="makeCall()"><i class="fa-solid fa-phone"></i>(123)-456-789</p>
+                    <p>
+                        <i class="fa-solid fa-envelope"/></i>
+                        <a href="mailto:careers@mangata_gallo.com">mangata_gallo@gmail.com</a></p>
+                </div>
+
+                <div>
+                    <h1>Follow Us</h1>
+                    <p><i class="fa-brands fa-facebook"></i>Facebook</p>
+                    <p><i class="fa-brands fa-square-instagram"></i>Instagram</p>
+                    <p><i class="fa-brands fa-square-x-twitter"></i>Twitter</p>
+                </div>
+                
+                <div>
+                    <h1>Join VIP Shopper Club</h1>
+                    <p><i class="fa-solid fa-circle-info"></i>Join our VIP club for trending products, updates and special promotions.</p>
+                    <form action="">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">Join Now</button>
+                    </form>
+                    <p><a href="./login.html">Already a VIP? Login now</a></span></p>
+                </div>
+            </div>
+            <img src="./assets/Asset 3@3x.png" alt="Mangata & Gallo Logo" style="height: 80px; width: 120px;">
+            <p class="copyright">Copyright&copy2024 Mangata & Gallo</p>
+        </div>
+    </div>
+    <script>
+        function makeCall() {
+            var phoneNumber = document.getElementById("hiddenPhoneNumber").innerText;
+        
+            window.location.href = "tel:" + phoneNumber;
+        }
+    </script>
+</body>
+</html>

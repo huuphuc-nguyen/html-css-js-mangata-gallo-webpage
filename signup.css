@@ -297,6 +297,10 @@ li img{
     color: gray;
 }
 
+.footer_content p:hover a{
+    color: gray;
+}
+
 .footer_content a:hover{
     color: gray;
 }
@@ -350,7 +354,7 @@ li img{
     }
 
     .header a{
-        font-size: x-small;
+        font-size: smaller;
     }
 
     h1{

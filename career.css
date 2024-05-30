@@ -102,21 +102,11 @@ h2 ~ p::first-letter {
     margin-left: 30px;
 }
 
-.container li {
+.main li {
     margin: 10px 0;
     margin-left: 20px;
 }
-
-.section-title {
-    margin-top: 20px;
-    color: #666;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 5px;;
-}
-
-
+ 
 .nav li {
     list-style-type: none;
 }
@@ -207,12 +197,16 @@ h2 ~ p::first-letter {
     color: gray;
 }
 
-.footer_content a:hover{
+.footer_content p:hover a{
     color: gray;
 }
 
-.footer_content i:hover + a{
+.footer_content p:hover a{
     color: gray;
+}
+
+.footer i{
+    margin-right: 10px;;
 }
 
 .footer input {
@@ -260,7 +254,7 @@ h2 ~ p::first-letter {
     }
 
     .header a{
-        font-size: x-small;
+        font-size: smaller;
     }
 
     h1{
