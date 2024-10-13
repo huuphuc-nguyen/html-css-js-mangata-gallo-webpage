@@ -1,17 +1,20 @@
-#Mangata-Gallo-Webpage
-## I. Project description:
-Mangata and Gallo is a jewelry store that specializes in special occasions like engagements, weddings and anniversaries. The jewelry company primarily operates online and has a small storefront in Austin, Texas with an atelier attached for browsing. Mangata & Gallo's selection of jewelry is known for its high-quality and classic look. The owner, an Austin local, is well known for her jewelry designs. 
-Mariana is the owner and the lead designer of Mangata and Gallo. After graduating from design school with a specialization in diamond cutting and metal smithing, Mariana opened a store in her hometown, Austin and started to grow her business online. Mariana has always managed every aspect of the business, from jewelry design to marketing to e-commerce. However, she recently hired several artisans to help craft her designs and a young employee to help manage the company website and social media accounts.
-## II. Some knowledge 
-- HTML
-  - SEO and OGP meta tags
-  - Semantic HTML tags
-  - Form and input tags
-  - Front-end validation input
-  - Media elements
-- CSS
-  - Effects
-  - Selectors
-  - Responsive layout using @media and flexbox
-## IV. Demo link
-https://youtu.be/Y0eKJ6j-vVQ
+# 💎 Mangata & Gallo Webpage 💎
+
+Welcome to **Mangata & Gallo**, where elegance meets craftsmanship. Specializing in fine jewelry for engagements, weddings, and anniversaries, our Austin-based store delivers exceptional designs by our expert artisan, Mariana. Whether browsing online or visiting our Austin storefront, Mangata & Gallo offers timeless beauty in every piece.
+
+## ✨ Key Features
+- 🌐 **Responsive Online Store**: Seamlessly accessible across devices.
+- 💍 **Premium Jewelry Designs**: Crafted with elegance for special occasions.
+- 🔍 **SEO & OGP Optimization**: Enhanced visibility and sharing across platforms.
+- 🖼️ **Media-Rich Experience**: Showcasing product images and media beautifully.
+
+## 🛠️ Technologies Used
+- **HTML**:  
+  - Semantic structure for accessibility.  
+  - Forms, inputs, and media elements.
+- **CSS**:  
+  - Responsive design with Flexbox and media queries.  
+  - Stunning visual effects for enhanced UX.
+
+## 🚀 Live Demo
+🔗 [View the Live Demo](https://youtu.be/Y0eKJ6j-vVQ)
