@@ -17,4 +17,4 @@ Welcome to **Mangata & Gallo**, where elegance meets craftsmanship. Specializing
   - Stunning visual effects for enhanced UX.
 
 ## 🚀 Live Demo
-🔗 [View the Live Demo](https://youtu.be/Y0eKJ6j-vVQ)
+🔗 [View the Live Demo](https://felixnguyen.dev/mangatagallo/)
